@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Hostinger WordPress Maintenance Toolkit interface preview</title>
+  <desc id="desc">Anonymous desktop interface showing site selection, maintenance controls, and local logs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071126"/><stop offset="1" stop-color="#12345b"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="28" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <circle cx="1260" cy="100" r="240" fill="#5eead4" opacity=".08"/>
+  <circle cx="140" cy="810" r="300" fill="#60a5fa" opacity=".09"/>
+  <g filter="url(#shadow)">
+    <rect x="90" y="70" width="1260" height="760" rx="22" fill="#f8fafc"/>
+    <path d="M90 92a22 22 0 0 1 22-22h1216a22 22 0 0 1 22 22v54H90z" fill="#0f172a"/>
+    <circle cx="128" cy="108" r="8" fill="#fb7185"/><circle cx="154" cy="108" r="8" fill="#fbbf24"/><circle cx="180" cy="108" r="8" fill="#34d399"/>
+    <text x="720" y="116" text-anchor="middle" font-family="Segoe UI,Arial" font-size="18" fill="#e2e8f0">Hostinger WordPress Maintenance Toolkit</text>
+  </g>
+  <g font-family="Segoe UI,Arial">
+    <text x="130" y="190" font-size="18" font-weight="600" fill="#0f172a">Ready for manual sign-in</text>
+    <text x="130" y="218" font-size="14" fill="#475569">Credentials stay inside a dedicated local Chrome profile.</text>
+    <rect x="1100" y="178" width="200" height="46" rx="10" fill="#2563eb"/><text x="1200" y="207" text-anchor="middle" font-size="15" font-weight="600" fill="white">Connect Chrome</text>
+    <rect x="130" y="256" width="132" height="40" rx="9" fill="#e2e8f0"/><text x="196" y="281" text-anchor="middle" font-size="14" fill="#0f172a">Select all</text>
+    <rect x="276" y="256" width="110" height="40" rx="9" fill="#e2e8f0"/><text x="331" y="281" text-anchor="middle" font-size="14" fill="#0f172a">Clear</text>
+    <rect x="402" y="256" width="260" height="40" rx="9" fill="#0f766e"/><text x="532" y="281" text-anchor="middle" font-size="14" font-weight="600" fill="white">Update and clean comments</text>
+    <rect x="130" y="320" width="1170" height="294" rx="12" fill="white" stroke="#cbd5e1"/>
+    <rect x="130" y="320" width="1170" height="54" rx="12" fill="#f1f5f9"/>
+    <text x="175" y="353" font-size="14" font-weight="600" fill="#334155">USE</text><text x="280" y="353" font-size="14" font-weight="600" fill="#334155">SITE</text><text x="760" y="353" font-size="14" font-weight="600" fill="#334155">STATUS</text>
+    <g font-size="15" fill="#0f172a">
+      <text x="178" y="414" fill="#0f766e">☑</text><text x="280" y="414">site-a.example</text><text x="760" y="414" fill="#0f766e">Updates complete</text>
+      <line x1="150" y1="438" x2="1280" y2="438" stroke="#e2e8f0"/>
+      <text x="178" y="480" fill="#0f766e">☑</text><text x="280" y="480">site-b.example</text><text x="760" y="480" fill="#2563eb">Checking plugin updates</text>
+      <line x1="150" y1="504" x2="1280" y2="504" stroke="#e2e8f0"/>
+      <text x="178" y="546" fill="#64748b">☐</text><text x="280" y="546">site-c.example</text><text x="760" y="546" fill="#64748b">Not selected</text>
+    </g>
+    <rect x="130" y="640" width="1170" height="135" rx="12" fill="#0f172a"/>
+    <text x="158" y="674" font-size="13" fill="#94a3b8">LOCAL RUN LOG</text>
+    <text x="158" y="709" font-size="14" fill="#dbeafe">site-a.example: update queue verified clear</text>
+    <text x="158" y="739" font-size="14" fill="#bfdbfe">site-b.example: waiting for completion marker</text>
+    <text x="1248" y="739" text-anchor="end" font-size="13" fill="#5eead4">2 of 3 sites</text>
+    <text x="720" y="808" text-anchor="middle" font-size="12" fill="#64748b">Interface preview with reserved example domains; no customer data is shown.</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a reproducible maintenance workflow problem without private site data.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, cookies, tokens, private domains, SSO links, browser profiles, or raw logs.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Use anonymous names such as Site A.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: v1.0.0
+    validations:
+      required: true
