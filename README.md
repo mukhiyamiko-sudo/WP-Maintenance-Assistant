@@ -1,4 +1,4 @@
-# Hostinger WordPress Maintenance Toolkit
+# WP Maintenance Assistant
 
 A Windows desktop utility for maintainers who manage multiple independent WordPress installations through Hostinger hPanel. It discovers WordPress sites, performs core/theme/plugin/translation updates, verifies that update queues converge, and optionally clears comments in a controlled site-by-site workflow.
 

@@ -1,6 +1,6 @@
 # v1.0.0
 
-First public release of the Hostinger WordPress Maintenance Toolkit.
+First public release of WP Maintenance Assistant.
 
 ## Highlights
 
