@@ -1,3 +1,18 @@
+# v1.1.0 — Fifth desktop build
+
+This release keeps site scanning compatible after Google Chrome upgrades.
+
+## Changes
+
+- Let Selenium Manager select a ChromeDriver that matches the installed Chrome version.
+- Store downloaded drivers in a private local `driver_cache` directory.
+- Ignore that driver cache so it cannot be committed with source code.
+- Add regression coverage for the ChromeDriver selection and cache settings.
+
+## Download note
+
+The Windows EXE is not digitally signed, so Windows may show an unknown-publisher warning. Verify the SHA-256 checksum shown in the GitHub Release before running it.
+
 # v1.0.0
 
 First public release of WP Maintenance Assistant.
