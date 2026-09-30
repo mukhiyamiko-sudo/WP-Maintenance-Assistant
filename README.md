@@ -41,7 +41,7 @@ The screenshots use no visible customer domain or account identifier. The empty 
 
 ## Install from a Release
 
-1. Download `WP自动更新和删除_第五版.exe` from the `v1.1.0` GitHub Release.
+1. Download `WP-Maintenance-Assistant-v1.1.0.exe` from the `v1.1.0` GitHub Release.
 2. Place it in its own writable folder.
 3. Double-click the EXE and choose **Connect Chrome**.
 4. Complete Hostinger login, SSO, or security verification yourself in the opened Chrome window.
