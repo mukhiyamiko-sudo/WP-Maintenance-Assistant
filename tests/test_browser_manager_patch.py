@@ -1,10 +1,31 @@
+import os
 import unittest
+from pathlib import Path
 
 from core.browser_manager import BrowserManager
 from core.config import RuntimeConfig
 
 
 class BrowserManagerCloseTabPatchTests(unittest.TestCase):
+    def test_default_driver_uses_private_selenium_manager_cache(self):
+        from core import browser_manager
+        from core.browser_manager_patch import apply_safe_close_tab_patch
+
+        original_paths = browser_manager.default_chromedriver_paths
+        try:
+            apply_safe_close_tab_patch()
+
+            self.assertEqual(browser_manager.default_chromedriver_paths(), [])
+            self.assertEqual(os.environ["SE_AVOID_STATS"], "true")
+            self.assertEqual(os.environ["SE_AVOID_BROWSER_DOWNLOAD"], "true")
+            self.assertEqual(os.environ["SE_SKIP_DRIVER_IN_PATH"], "true")
+            self.assertEqual(
+                Path(os.environ["SE_CACHE_PATH"]),
+                browser_manager.runtime_base_dir() / "driver_cache",
+            )
+        finally:
+            browser_manager.default_chromedriver_paths = original_paths
+
     def test_none_sleeper_uses_default(self):
         manager = BrowserManager(RuntimeConfig(), sleeper=None)
 

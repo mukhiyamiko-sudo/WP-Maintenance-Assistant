@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from typing import Any
 
 
@@ -52,8 +53,29 @@ def _best_effort_close_and_restore(manager: Any, handle: str) -> None:
     _discard_automation_handle(manager, handle)
 
 
+def _use_selenium_manager_for_default_driver() -> None:
+    from core import browser_manager
+
+    os.environ["SE_AVOID_STATS"] = "true"
+    os.environ["SE_AVOID_BROWSER_DOWNLOAD"] = "true"
+    os.environ["SE_SKIP_DRIVER_IN_PATH"] = "true"
+    os.environ["SE_CACHE_PATH"] = str(browser_manager.runtime_base_dir() / "driver_cache")
+
+    default_paths = browser_manager.default_chromedriver_paths
+    if getattr(default_paths, "_wpautomation_selenium_manager_patch", False):
+        return
+
+    def selenium_manager_paths() -> list[str]:
+        return []
+
+    selenium_manager_paths._wpautomation_selenium_manager_patch = True  # type: ignore[attr-defined]
+    browser_manager.default_chromedriver_paths = selenium_manager_paths
+
+
 def apply_safe_close_tab_patch() -> None:
     from core.browser_manager import BrowserManager
+
+    _use_selenium_manager_for_default_driver()
 
     original_close_tab = BrowserManager.close_tab
     if getattr(original_close_tab, "_wpautomation_safe_close_patch", False):
